@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 200px;
+    font-family: monospace, sans-serif;
+    background: #f5f5f5;
+    background: linear-gradient(#ffffff, #ffffff);
+    text-align: center
+}
+
+h2 {
+    color: #ffffff;
+}
+
+p {
+    text-align: center;
+    margin-top: -170px;
+    margin-left: 250px;
+    margin-right: 250px;
+}
+
+.p-1 {
+    text-align: justify;
+    text-indent: 40px;
+    margin-top: -15px;
+    margin-left: 250px;
+    margin-right: 250px;
+}
+
+.signature {
+    text-align: right;
+    margin-top: 5px;
+    margin-right: -420px;
+}
+
+.letter {
+    background: #fff;
+    padding: 40px 60px;
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.letter::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    padding: 6px;
+    background: repeating-linear-gradient(
+    45deg,
+    #3c3c3c 0,
+    #e74c3c 10px,
+    #f6f6e2 10px,
+    #3498db 20px
+);
+-webkit-mask: 
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+-webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 200px;
+}
+
+.text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: jalan 45s linear infinite;
+    font-size: 1,5cm;
+}
+            
+.marquee-wrapper {
+    max-width: 100%;
+    background: rgba(0, 0, 0, 0.08);
+    border-radius: 999px;           
+    padding: 5px p10x;
+    overflow: hidden;
+}
+
+.marquee {
+    white-space: nowrap;
+}
+
+.fade-text {
+    font-size: 30px;
+    opacity: 0;
+    animation: fadeIn 4s ease forwards;
+    text-align: center;
+}
+
+.fade-text-01 {
+    font-size: 30px;
+    opacity: 0;
+    animation: fadeIn 5s ease forwards;
+    text-align: center;
+}
+
+.fade-text-1{
+    font-size: 18px;
+    opacity: 0;
+    animation: fadeIn 6s ease forwards;
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes jalan {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
